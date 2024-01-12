@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4a90e2, #63d8ff);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: linear-gradient(to right, #4a90e2, #63d8ff);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            height: 8%;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav i {
+            color: #eee;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        main h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        main p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .contact-section {
+            margin-top: 20px;
+        }
+        
+        .contact-section h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .contact-section p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+        
+        .contact-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .contact-form button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .contact-form button:hover {
+            background-color: #63d8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Help & Feedback</h1>
+    </header>
+
+    <main>
+        <h2>Need Assistance?</h2>
+        <p>If you require assistance or have any feedback, feel free to reach out to us. We're here to help!</p>
+
+        <div class="contact-section">
+            <h3>Contact Us</h3>
+            <p>Have a specific question or feedback? Fill out the form below, and we'll get back to you as soon as possible.</p>
+
+            <form class="contact-form" action="thanks.html">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <nav>
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="inbox.html"><i class="fas fa-envelope"></i></a>
+        <a href="pre-profile.html"><i class="fas fa-user"></i></a>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            transition: margin-top 0.3s;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4a90e2, #63d8ff);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: top 0.3s;
+        }
+        
+        header h1 {
+            margin: 0;
+            flex-grow: 1;
+        }
+        
+        header i {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        
+        main {
+            flex: 1;
+            padding: 80px 20px 20px;
+        }
+        
+        main .news-content {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        main .separator {
+            margin: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        main .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        main .button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        main .button i {
+            margin-right: 5px;
+        }
+        
+        main p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        #readCheckbox {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .liked {
+            color: #ea4335;
+        }
+        
+        .starred {
+            color: #fbbc05;
+        }
+        
+        .shared {
+            color: #4285f4;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <i class="fas fa-chevron-left" onclick="goBack()"></i>
+        <h1>News</h1>
+    </header>
+
+    <main>
+        <div class="news-content">
+            <!-- Your news content goes here -->
+            <h2>Harbin Institute of Technology Launches Innovative Research Center</h2>
+            <p>Harbin, China - In a groundbreaking move, Harbin Institute of Technology (HIT) has unveiled its new Research Center for Advanced Technologies (RCAT). The center aims to foster innovation and collaboration across various scientific disciplines.
+                The RCAT will focus on cutting-edge research in artificial intelligence, renewable energy, and advanced materials.</p>
+            <p>The inauguration ceremony was attended by renowned scientists, government officials, and industry leaders. HIT's President, Prof. Zhang Ming, expressed excitement about the potential impact of RCAT on global research and technological advancements.
+            </p>
+            <p>The research center will provide state-of-the-art facilities and resources to support interdisciplinary projects. Collaborations with international institutions are already in the works, marking a new chapter in HIT's commitment to global
+                scientific cooperation.</p>
+            <p>HIT envisions RCAT as a hub for groundbreaking discoveries, with a focus on addressing some of the world's most pressing challenges. Researchers at RCAT will explore new frontiers in fields such as quantum computing, nanotechnology, and sustainable
+                development.
+            </p>
+            <p>The establishment of RCAT is part of HIT's broader strategy to position itself as a global leader in research and innovation. The university aims to attract top-tier talent and provide a conducive environment for cutting-edge research.
+            </p>
+            <p><strong>Published by:</strong> HIT News Department</p>
+            <p><strong>Published on:</strong> January 15, 2024</p>
+
+            <!-- Separator -->
+            <div class="separator"></div>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <div class="button" onclick="toggleLike()">
+                    <i class="fas fa-heart"></i> Like
+                </div>
+                <div class="button" onclick="toggleStar()">
+                    <i class="fas fa-star"></i> Star
+                </div>
+                <div class="button" onclick="toggleShare()">
+                    <i class="fas fa-share"></i> Share
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function goBack() {
+            window.location.href = 'home.html';
+        }
+
+        function toggleLike() {
+            document.querySelector('.button:nth-child(1)').classList.toggle('liked');
+        }
+
+        function toggleStar() {
+            document.querySelector('.button:nth-child(2)').classList.toggle('starred');
+        }
+
+        function toggleShare() {
+            document.querySelector('.button:nth-child(3)').classList.toggle('shared');
+        }
+
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.querySelector("header").style.top = "0";
+            } else {
+                document.querySelector("header").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4a90e2, #63d8ff);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: linear-gradient(to right, #4a90e2, #63d8ff);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+            height: 8%;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav i {
+            color: #eee;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .avatar-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        
+        .avatar-container:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .avatar-container i {
+            font-size: 2em;
+            color: #63d8ff;
+        }
+        
+        .login-message {
+            font-size: 1.5em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Account</h1>
+    </header>
+
+    <main>
+        <div class="avatar-container" onclick="window.location.href='login.html'">
+            <i class="fas fa-user"></i>
+        </div>
+        <p class="login-message">Click to Login</p>
+    </main>
+
+    <nav>
+        <a href="home.html"><i class="fas fa-home"></i></a>
+        <a href="inbox.html"><i class="fas fa-envelope"></i></a>
+        <a href="pre-profile.html"><i class="fas fa-user"></i></a>
+    </nav>
+</body>
+
+</html>
