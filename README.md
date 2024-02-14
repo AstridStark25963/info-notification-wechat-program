@@ -1,4 +1,4 @@
-# 信息通知系统前端页面
+# Front-end page of Information
 随便写了点前端发着玩
 
 看看GitHub怎么用
