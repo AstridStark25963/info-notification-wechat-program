@@ -1,6 +1,7 @@
-# Front-end page of Information
-随便写了点前端发着玩
+# Front-end page of Information Notification WeChat Program
+### Function ###
+To show interfaces of the program
 
-看看GitHub怎么用
-
-直接运行home.html
+Exists like a template for future rewriting
+### Manual ###
+Run by opening **home.js**
